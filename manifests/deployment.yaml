@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{APP_NAME}}-deployment
+  name: username-ammmmm-deployed-deployment
   labels:
-    app: {{APP_NAME}}
+    app: username-ammmmm-deployed
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: {{APP_NAME}}
+      app: username-ammmmm-deployed
   template:
     metadata:
       labels:
-        app: {{APP_NAME}}
+        app: username-ammmmm-deployed
     spec:
       containers:
-        - name: {{APP_NAME}}-container
-          image: ${{secrets.DOCKER_USERNAME}}/{{APP_NAME}}:{{IMAGE_TAG}}
+        - name: username-ammmmm-deployed-container
+          image: lunix007/username-ammmmm-deployed:3b1f1d020542d02e54c4b31fecd96c9e5ceffb95
           ports:
             - containerPort: 80
           resources:
